@@ -72,7 +72,7 @@ class AdminController
 		$Telefono = $_POST['Telefono'];
 		$Email = $_POST['Email'];
 		$Cursos = $_POST['curso'];
-        $Rol = $_POST['Rol'];
+        $Rol = $_POST['rol'];
 
 		$usuariosE = new Admin_model();
 		$usuariosE->editarU($id,$nombres, $apellido_uno, $apellido_dos, $Tdocumento, $Ndocumento,$Telefono, $Email, $Cursos,$Rol);

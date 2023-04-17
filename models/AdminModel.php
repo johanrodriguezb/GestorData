@@ -118,11 +118,11 @@ class Admin_model
         }
     }
 
-    public function editarU($id, $nombres, $apellido_uno, $apellido_dos, $Tdocumento, $Ndocumento, $Telefono, $Email, $Cursos)
+    public function editarU($id, $nombres, $apellido_uno, $apellido_dos, $Tdocumento, $Ndocumento, $Telefono, $Email, $Cursos,$Rol)
     {
 
-        $sql = $this->db->query("UPDATE usuarios SET tipoDocumento = $Tdocumento, NumeroDocmuento = $Ndocumento, Nombres = '$nombres', Primer_Apellido = '$apellido_uno', Segundo_Apellido = '$apellido_dos', Telefono = $Telefono, Correo = '$Email', Curso = $Cursos  WHERE id_usuario = $id");
-        echo "UPDATE usuarios SET tipoDocumento = $Tdocumento, NumeroDocmuento = $Ndocumento, Nombres = '$nombres', Primer_Apellido = '$apellido_uno', Segundo_Apellido = '$apellido_dos', Telefono = $Telefono, Correo = '$Email',  Curso = $Cursos  WHERE id_usuario = $id";
+        $sql = $this->db->query("UPDATE usuarios SET tipoDocumento = $Tdocumento, NumeroDocmuento = $Ndocumento, Nombres = '$nombres', Primer_Apellido = '$apellido_uno', Segundo_Apellido = '$apellido_dos', Telefono = $Telefono, Correo = '$Email' WHERE id_usuario = $id");
+        //echo "UPDATE usuarios SET tipoDocumento = $Tdocumento, NumeroDocmuento = $Ndocumento, Nombres = '$nombres', Primer_Apellido = '$apellido_uno', Segundo_Apellido = '$apellido_dos', Telefono = $Telefono, Correo = '$Email' WHERE id_usuario = $id";
         $alerta = 'alert-success';
         $mensaje = 'Usuario Actualizado';
         $this->redireccionadmin($alerta, $mensaje);

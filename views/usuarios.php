@@ -104,6 +104,7 @@ include 'assets/includes/function.php';
                                         <div class="modal-body">
 
                                             <input type="hidden" name="id" value="<?php echo $usuarios['id_usuario'] ?>">
+                                            <input type="hidden" name="rol" value="<?php echo $usuarios['idRol'] ?>">
 
                                             <label for="">Nombres</label>
                                             <input type="text" name="nombres" id="validationCustom01" class="form-control" value="<?php echo $usuarios['Nombres'] ?>" required>
@@ -137,17 +138,7 @@ include 'assets/includes/function.php';
                                             <input type="email" class="form-control" name="Email" value="<?php echo $usuarios['Correo'] ?>" required>
 
                                             <label for="">Curso</label>
-                                            <select name="curso" class="form-control">
-                                                <option value="<?php echo $usuarios['id_curso'] ?>"><?php echo $usuarios['NombreCurso'] ?></option>
-                                                <?php
-                                                foreach ($data['cursos'] as $cursos) {
-                                                ?>
-                                                    <option value="<?php echo $cursos['id_curso'] ?>"><?php echo $cursos['NombreCurso'] ?></option>
-
-                                                <?php
-                                                }
-                                                ?>
-                                            </select>
+                                            <input type="text" class="form-control" name="curso" value="<?php echo $usuarios['NombreCurso'] ?>" disabled>
 
                                         </div>
                                         <div class="modal-footer">
