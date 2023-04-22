@@ -27,16 +27,23 @@ include 'assets/includes/function.php';
             <p><b>Señ@r Admin, aquí encontrará una interfaz para la administración de Administradores o Instructores</b></p>
             <br>
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#ModalAgregar"><i class="fa-solid fa-plus"></i></button>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <button type="button" class="btn btn-success" onclick="exportTableToExcel('tabla_usuarios', 'tabla_usuarios')">Excel General</button>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <form action="views/reportes.php" method="POST">
                         <button type="submit" class="btn btn-success">
                             Excel Matriculados
+                        </button>
+                    </form>
+                </div>
+                <div class="col-md-3">
+                    <form action="views/gestores.php" method="POST">
+                        <button type="submit" class="btn btn-success">
+                            Excel Gestores
                         </button>
                     </form>
                 </div>
