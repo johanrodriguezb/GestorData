@@ -42,7 +42,8 @@ include 'assets/includes/function.php';
                         <th>Telefono</th>
                         <th>Rol</th>
                         <th>Curso</th>
-                        <th colspan="3">Accion</th>
+                        <th>Accion 1</th>
+                        <th>Accion 2</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -193,3 +194,6 @@ include 'assets/includes/function.php';
         </table>
 
 </body>
+<script>
+    new window.simpleDatatables.DataTable("table")
+</script>

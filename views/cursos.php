@@ -27,12 +27,13 @@
             <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#AgregarCurso"><i class="fa-solid fa-plus"></i></button>
             <br>
             <br>
-            <table class="table table-bordered">
+            <table class="table table-bordered table">
                 <thead class="bg bg-primary text-white text-center">
                     <tr>
                         <th># Curso</th>
                         <th>Nombre Curso</th>
-                        <th colspan="2">Accion</th>
+                        <th>Accion 1</th>
+                        <th>Accion 2</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -108,3 +109,6 @@
         </div>
     </div>
     </body>
+    <script>
+        new window.simpleDatatables.DataTable("table")
+    </script>

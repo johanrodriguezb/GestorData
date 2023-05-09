@@ -120,3 +120,6 @@ include 'assets/includes/scripts.html';
     </div>
 
 </body>
+<script>
+    new window.simpleDatatables.DataTable("table")
+</script>

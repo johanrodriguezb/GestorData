@@ -50,8 +50,8 @@ include 'assets/includes/function.php';
             </div>
             <br>
 
-            <table class="table table-bordered">
-                <thead class="bg bg-primary text-white text-center">
+            <table class="table">
+                <thead>
                     <tr>
                         <th>Tipo Doc</th>
                         <th>Numero Doc</th>
@@ -60,7 +60,8 @@ include 'assets/includes/function.php';
                         <th>Telefono</th>
                         <th>Rol</th>
                         <th>Curso</th>
-                        <th colspan="2">Accion</th>
+                        <th>Accion 1</th>
+                        <th>Accion 2</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -89,15 +90,15 @@ include 'assets/includes/function.php';
                         }
                     ?>
                         <tr>
-                            <th><?php echo $txt_documento ?></th>
-                            <th><?php echo $usuarios['NumeroDocmuento'] ?></th>
-                            <th><?php echo $usuarios['Nombres'] ?></th>
-                            <th><?php echo $usuarios['Primer_Apellido'] . ' ' . $usuarios['Segundo_Apellido'] ?></th>
-                            <th><?php echo $usuarios['Telefono'] ?></th>
-                            <th><?php echo $usuarios['NombreRol'] ?><abbr title="<?php echo $usuarios['Correo'] ?>"><i class="fa-solid fa-circle-info fa-xs mt-3"></i></abbr> </th>
-                            <th><?php echo $usuarios['NombreCurso'] ?></th>
-                            <th><button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#ModalEditar<?php echo $usuarios['id_usuario'] ?>">Editar</button></th>
-                            <th><a href="<?php echo $ruta ?>&id=<?php echo $usuarios['id_usuario'] ?>"><button type="submit" class="btn <?php echo $color_estado ?>"><?php echo $txt_estado ?></button></a></th>
+                            <td><?php echo $txt_documento ?></td>
+                            <td><?php echo $usuarios['NumeroDocmuento'] ?></td>
+                            <td><?php echo $usuarios['Nombres'] ?></td>
+                            <td><?php echo $usuarios['Primer_Apellido'] . ' ' . $usuarios['Segundo_Apellido'] ?></td>
+                            <td><?php echo $usuarios['Telefono'] ?></td>
+                            <td><?php echo $usuarios['NombreRol'] ?><abbr title="<?php echo $usuarios['Correo'] ?>"><i class="fa-solid fa-circle-info fa-xs mt-3"></i></abbr> </td>
+                            <td><?php echo $usuarios['NombreCurso'] ?></td>
+                            <td><button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#ModalEditar<?php echo $usuarios['id_usuario'] ?>">Editar</button></td>
+                            <td><a href="<?php echo $ruta ?>&id=<?php echo $usuarios['id_usuario'] ?>"><button type="submit" class="btn <?php echo $color_estado ?>"><?php echo $txt_estado ?></button></a></td>
                         </tr>
 
                         <!-- Modal -->
@@ -286,3 +287,7 @@ include 'assets/includes/function.php';
         <?php } ?>
     </table>
 </div>
+<!-- Custom Code -->
+<script>
+    new window.simpleDatatables.DataTable("table")
+</script>
