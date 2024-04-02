@@ -27,7 +27,7 @@ class Admin_model
 
     public function get_admin()
     {
-        $sql = "SELECT * FROM usuarios a inner join tipoDocumento b on a.tipoDocumento = b.id_documento inner join rol c on a.idRol = c.id_rol inner join Cursos d on a.Curso = d.id_curso left join instructorescursos e on a.id_usuario = e.id_alumno WHERE a.idRol = 3 ORDER BY e.id_alumno ASC";
+        $sql = "SELECT * FROM usuarios a inner join tipodocumento b on a.tipoDocumento = b.id_documento inner join rol c on a.idRol = c.id_rol inner join cursos d on a.Curso = d.id_curso left join instructorescursos e on a.id_usuario = e.id_alumno WHERE a.idRol = 3 ORDER BY e.id_alumno ASC";
         $resultado = $this->db->query($sql);
         while ($row = $resultado->fetch_assoc()) {
             $this->admin[] = $row;
@@ -78,7 +78,7 @@ class Admin_model
 
     public function get_usuarios()
     {
-        $sql = "SELECT * FROM usuarios a inner join tipoDocumento b on a.tipoDocumento = b.id_documento inner join rol c on a.idRol = c.id_rol inner join Cursos d on a.Curso = d.id_curso left join instructorescursos e on a.id_usuario = e.id_alumno";
+        $sql = "SELECT * FROM usuarios a inner join tipodocumento b on a.tipoDocumento = b.id_documento inner join rol c on a.idRol = c.id_rol inner join cursos d on a.Curso = d.id_curso left join instructorescursos e on a.id_usuario = e.id_alumno";
         $resultado = $this->db->query($sql);
         while ($row = $resultado->fetch_assoc()) {
             $this->admin[] = $row;
@@ -88,7 +88,7 @@ class Admin_model
 
     public function get_instructores()
     {
-        $sql = "SELECT * FROM usuarios a inner join tipoDocumento b on a.tipoDocumento = b.id_documento inner join rol c on a.idRol = c.id_rol inner join Cursos d on a.Curso = d.id_curso WHERE idRol = 2";
+        $sql = "SELECT * FROM usuarios a inner join tipodocumento b on a.tipoDocumento = b.id_documento inner join rol c on a.idRol = c.id_rol inner join cursos d on a.Curso = d.id_curso WHERE idRol = 2";
         $resultado = $this->db->query($sql);
         while ($row = $resultado->fetch_assoc()) {
             $this->admin[] = $row;
@@ -118,7 +118,7 @@ class Admin_model
         }
     }
 
-    public function editarU($id, $nombres, $apellido_uno, $apellido_dos, $Tdocumento, $Ndocumento, $Telefono, $Email, $Cursos,$Rol)
+    public function editarU($id, $nombres, $apellido_uno, $apellido_dos, $Tdocumento, $Ndocumento, $Telefono, $Email, $Cursos, $Rol)
     {
 
         $sql = $this->db->query("UPDATE usuarios SET tipoDocumento = $Tdocumento, NumeroDocmuento = $Ndocumento, Nombres = '$nombres', Primer_Apellido = '$apellido_uno', Segundo_Apellido = '$apellido_dos', Telefono = $Telefono, Correo = '$Email' WHERE id_usuario = $id");
