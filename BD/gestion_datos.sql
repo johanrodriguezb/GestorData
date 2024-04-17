@@ -60,7 +60,7 @@ CREATE TABLE `instructorescursos` (
   `id_curso` int(11) DEFAULT NULL,
   `nombre_instructor` varchar(150) DEFAULT NULL,
   `EstadoAceptado` int(11) NOT NULL DEFAULT 0,
-  `Observacion` text NOT NULL DEFAULT 'Ninguna'
+  `Observacion` varchar(255) NOT NULL DEFAULT 'Ninguna'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
